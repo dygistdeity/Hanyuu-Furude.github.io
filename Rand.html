@@ -4,56 +4,56 @@
 <head>
     <title>SkylarkStudio 云雀工坊</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Kikyo.css">
+    <link rel="stylesheet" href="rand.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script>
         var max = 32;
         var list = new Array(max);
-        list[0] = { idcard: "0", name: "0" };
-        list[1] = { idcard: "1", name: "1" };
-        list[2] = { idcard: "2", name: "2" };
-        list[3] = { idcard: "3", name: "3" };
-        list[4] = { idcard: "4", name: "4" };
-        list[5] = { idcard: "5", name: "5" };
-        list[6] = { idcard: "6", name: "6" };
-        list[7] = { idcard: "7", name: "7" };
-        list[8] = { idcard: "8", name: "8" };
-        list[9] = { idcard: "9", name: "9" };
-        list[10] = { idcard: "10", name: "10" };
-        list[11] = { idcard: "11", name: "11" };
-        list[12] = { idcard: "12", name: "12" };
-        list[13] = { idcard: "13", name: "13" };
-        list[14] = { idcard: "14", name: "14" };
-        list[15] = { idcard: "15", name: "15" };
-        list[16] = { idcard: "16", name: "16" };
-        list[17] = { idcard: "17", name: "17" };
-        list[18] = { idcard: "18", name: "18" };
-        list[19] = { idcard: "19", name: "19" };
-        list[20] = { idcard: "20", name: "20" };
-        list[21] = { idcard: "21", name: "21" };
-        list[22] = { idcard: "22", name: "22" };
-        list[23] = { idcard: "23", name: "23" };
-        list[24] = { idcard: "24", name: "24" };
-        list[25] = { idcard: "25", name: "25" };
-        list[26] = { idcard: "26", name: "26" };
-        list[27] = { idcard: "27", name: "27" };
-        list[28] = { idcard: "28", name: "28" };
-        list[29] = { idcard: "29", name: "29" };
-        list[30] = { idcard: "30", name: "30" };
-        list[31] = { idcard: "31", name: "31" };
+        list[0] = { idcard: "example01", name: "库代蓝" };
+        list[1] = { idcard: "example02", name: "常俊达" };
+        list[2] = { idcard: "example03", name: "兴南霜" };
+        list[3] = { idcard: "example04", name: "盈沛白" };
+        list[4] = { idcard: "example05", name: "闽和歌" };
+        list[5] = { idcard: "example06", name: "召紫萱" };
+        list[6] = { idcard: "example07", name: "虞琳芳" };
+        list[7] = { idcard: "example08", name: "厍天心" };
+        list[8] = { idcard: "example09", name: "飞君丽" };
+        list[9] = { idcard: "example10", name: "尉迟英杰" };
+        list[10] = { idcard: "example11", name: "独敏博" };
+        list[11] = { idcard: "example12", name: "仵玉珂" };
+        list[12] = { idcard: "example13", name: "栗丹亦" };
+        list[13] = { idcard: "example14", name: "濮天蓉" };
+        list[14] = { idcard: "example15", name: "虢痴柏" };
+        list[15] = { idcard: "example16", name: "井英睿" };
+        list[16] = { idcard: "example17", name: "溥浩宕" };
+        list[17] = { idcard: "example18", name: "亓妍芳" };
+        list[18] = { idcard: "example19", name: "辟清怡" };
+        list[19] = { idcard: "example20", name: "糜妙晴" };
+        list[20] = { idcard: "example21", name: "成修贤" };
+        list[21] = { idcard: "example22", name: "势烨霖" };
+        list[22] = { idcard: "example23", name: "仍香彤" };
+        list[23] = { idcard: "example24", name: "何格菲" };
+        list[24] = { idcard: "example25", name: "本寄蕾" };
+        list[25] = { idcard: "example26", name: "怀凝珍" };
+        list[26] = { idcard: "example27", name: "出家美" };
+        list[27] = { idcard: "example28", name: "帖娜娜" };
+        list[28] = { idcard: "example29", name: "莱初彤" };
+        list[29] = { idcard: "example30", name: "旷雅蕊" };
+        list[30] = { idcard: "example31", name: "郭寒香" };
+        list[31] = { idcard: "example32", name: "单易巧" };
 
         var state = 0;
         var dr;
 
         function draw() {
             if (state == 0) {
-                document.getElementById("button").innerHTML = "停止";
+                document.getElementById("button").innerHTML = "◻";
                 state = 1;
                 dr = self.setInterval(change, 10);
             }
             else {
-                document.getElementById("button").innerHTML = "开始";
+                document.getElementById("button").innerHTML = "▷";
                 state = 0;
                 dr = window.clearInterval(dr);
             }
@@ -89,48 +89,40 @@
 
 </head>
 
-<body style="background-image: url(background.jpg)">
+<body>
 
     <center>
-        <br>
-        <br>
-        <br>
-        <span style="font-size:35px" class="Kikyo">抽了个签</span>
-        <br>
-        <br>
-        <span style="font-size:20px" class="Kikyo">Skylark Studio</span>
-        <br>
-        <br>
+        <span id="title" class="Kikyo">抽了个签</span>
         <br>
     </center>
 
     </head>
-    <main style="font-weight: normal;font-size: normal" class="Kikyo">
+    <main class="Kikyo">
         <center>
-            <div style="margin:10ch;width:300px;padding:10px">
+            <div id="main_box">
 
                 抽取人数：
                 <input type="number" id="number" min="1" max="32" value="1"></input>
-                <button id="button" type="buttom" onclick="draw()">开始</button>
+                <button id="button" type="buttom" onclick="draw()">▷</button>
                 <br>
-                <div class="backgroundimagine" id="result" style="margin:5%;padding:5%;color:#6a4c9c"></div>
+                <div id="result"></div>
             </div>
         </center>
     </main>
-    <p style="color: #4c8dae;text-align: center" class="Kikyo">
+    <div id="ft" class="Kikyo">
         Powered by:Kuang.
         <br> &copy; Copyright
         <small>2018</small>
         <i>
             <strong>
-                <a style="color: #4c8dae" href="https://github.com/SkylarkStudio-Suyu">SkylarkStudio</a>
+                <a href="https://github.com/SkylarkStudio-Suyu">SkylarkStudio</a>
             </strong>
         </i>. All right saved.</small>
         <br>
         <strong>
-            <a style="color: #4c8dae;" href="mailto:Skylark_Studio@outlook.com">Contact me</a>
+            <a href="mailto:Skylark_Studio@outlook.com">Contact me</a>
 
         </strong>
-    </p>
+    </div>
 
 </html>
