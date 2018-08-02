@@ -1,6 +1,5 @@
 .Kikyo {
     color: #6a4c9c;
-    font-size: 1em;
     text-shadow: 3px 3px 6px #8F77B5;
 }
 
@@ -11,17 +10,26 @@ body {
     width: 80%;
     margin: auto;
 }
-#index{
+#nav{
     text-align: center;
 }
 #logo {
     height: 100px;
     width: 100px;
-    alt: "logo";
+    float: left;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+#head{
+    float: left;
+    position: absolute;
+    left: 120px;
+    top: 40px;
 }
 
 #title {
-    font-size: 35px;
+    font-size: 20px;
 }
 
 #sub_title {
