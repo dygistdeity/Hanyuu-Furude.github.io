@@ -31,24 +31,35 @@ body {
     float: left;
     position: absolute;
     left: 120px;
-    top: 40px;
+    top: 20px;
 }
 
 #title {
+    color: #6a4c9c;
+    text-shadow: 3px 3px 6px #8F77B5;
     font-size: 20px;
 }
 
 #sub_title {
+    color: #6a4c9c;
+    text-shadow: 3px 3px 6px #8F77B5;
     font-size: 20px;
+}
+
+#info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6a4c9c;
+    text-shadow: 3px 3px 6px #8F77B5;
 }
 
 #nav {
     width: 60%;
     min-width: 200px;
-    max-width: 500px;;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 200px;
     padding: 20px;
     /* box-shadow: 5px 5px 15px; */
     border-style: hidden;
@@ -65,52 +76,22 @@ nav {
     margin: 5px;
     padding: 5px;
     box-shadow: 5px 5px 15px;
-    font-size: 1em;
     border-style: hidden;
     color: #6a8372;
     /*#66bab7[水浅葱]#6a8372[老竹]*/
-    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.3);
     text-align: center;
 }
 
-#info {
-    float: right;
+a {
+    text-decoration: none;
+    color: #268785;
+}
+
+#music {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    margin: 0;
-    text-align: right;
-    color: #6a4c9c;
-    text-shadow: 3px 3px 6px #8F77B5;
-}
-
-.wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-}
-
-.dashedborder {
-    border-width: 3px;
-    border-style: dashed;
-    border-color: #268785;
-    box-shadow: 3px 3px 20px;
-    border-radius: 15px
-}
-
-.grooveborder {
-    border-width: 3px;
-    border-style: groove;
-    border-color: #0d5661;
-}
-
-.backgroundimagine {
-    border-width: 3px;
-    border-style: dashed;
-    border-color: #268785;
-    box-shadow: 3px 3px 20px;
-    border-radius: 15px;
-    background-image: url(boxbackground.jpg);
-    background-clip: border-box;
+    left: 20px;
+    top: 150px;
+    border-style: solid;
+    border-width: 1px;
 }
