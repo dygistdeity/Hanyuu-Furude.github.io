@@ -5,7 +5,8 @@
 
 body {
     background-color: #f6efe4;
-    min-width: 200px;
+    min-width: 220px;
+    min-height: 600px;
     background-image: url(background.jpg);
     position: absolute;
     width: 100%;
@@ -42,20 +43,19 @@ body {
 }
 
 #nav {
-    position: absolute;
-    top: 200px;
-    left: 20px;
-    display: inline-block;
+    width: 60%;
+    min-width: 200px;
+    max-width: 500px;;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
     padding: 20px;
     box-shadow: 5px 5px 15px;
     border-style: hidden;
     color: #6a8372;
     /*#66bab7[水浅葱]#6a8372[老竹]*/
     border-radius: 15px;
-    background-color: #ffffff70;
-    text-align: center; 
-    margin-left: auto;
-    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 nav {
@@ -70,7 +70,7 @@ nav {
     color: #6a8372;
     /*#66bab7[水浅葱]#6a8372[老竹]*/
     border-radius: 15px;
-    background-color: #ffffff70;
+    background-color: rgba(255, 255, 255, 0.3);
     text-align: center;
 }
 
