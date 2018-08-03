@@ -46,31 +46,38 @@
         var state = 0;
         var dr;
 
-        function draw() {
-            if (state == 0) {
+        function draw()
+        {
+            if (state == 0)
+            {
                 document.getElementById("button").innerHTML = "◻";
                 state = 1;
                 dr = self.setInterval(change, 10);
             }
-            else {
+            else
+            {
                 document.getElementById("button").innerHTML = "▷";
                 state = 0;
                 dr = window.clearInterval(dr);
             }
         }
 
-        function change() {
+        function change()
+        {
             var number = document.getElementById("number").value;
 
-            if (number < 1 || number > max) {
+            if (number < 1 || number > max)
+            {
                 return;
             }
 
             var num = new Array();
-            for (var i = 0; i < number; i++) {
+            for (var i = 0; i < number; i++)
+            {
                 num[i] = Math.floor(Math.random() * max);
                 for (var j = 0; j < i; j++)
-                    if (num[i] == num[j]) {
+                    if (num[i] == num[j])
+                    {
                         i--;
                         break;
                     }
@@ -91,13 +98,28 @@
 
 <body>
 
-    <center>
-        <span id="title" class="Kikyo">抽了个签</span>
-        <br>
-    </center>
+    <div id="head">
+        <img id="pic" src="hanyuu.png">
+        <div id="title">抽签小程序</div>
+        <div id="info">
+            Powered by:Kuang.
+            <br> &copy; Copyright
+            <small>2018</small>
+            <i>
+                <strong>
+                    <a href="index.html">SkylarkStudio</a>
+                </strong>
+                <br>
+            </i>All right saved.</small>
+            <br>
+            <strong>
+                <a href="mailto:Skylark_Studio@outlook.com">Contact me</a>
+            </strong>
+        </div>
+    </div>
 
     </head>
-    <main class="Kikyo">
+    <main id="mainForm">
         <center>
             <div id="main_box">
 
@@ -109,20 +131,5 @@
             </div>
         </center>
     </main>
-    <div id="ft" class="Kikyo">
-        Powered by:Kuang.
-        <br> &copy; Copyright
-        <small>2018</small>
-        <i>
-            <strong>
-                <a href="index.html">SkylarkStudio</a>
-            </strong>
-        </i>. All right saved.</small>
-        <br>
-        <strong>
-            <a href="mailto:Skylark_Studio@outlook.com">Contact me</a>
-
-        </strong>
-    </div>
 
 </html>
