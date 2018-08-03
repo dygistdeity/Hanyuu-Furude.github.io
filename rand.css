@@ -16,7 +16,7 @@ body {
     position: absolute;
     left: 20px;
     top: 20px;
-    width: 800px;
+    width: 350px;
 }
 
 #pic {
@@ -48,7 +48,7 @@ body {
     top: 200px;
     min-width: 250px;
     max-width: 500px;
-    width: 40%;
+    width: 60%;
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -58,11 +58,9 @@ body {
 }
 
 #result {
-    border-style: none;
-    border-color: #268785;
     box-shadow: 2px 2px 10px;
     background-clip: border-box;
-    font-size: 1.2em;
+    font-size: 20pt;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
 }
@@ -71,15 +69,15 @@ input {
     background-color: rgba(255, 255, 255, 0.5);
     border-bottom-style: dashed;
     border-radius: 30px;
-    width: 50px;
+    width: 70px;
     margin: 10px;
     padding: 3px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 18pt;
 }
 
 button {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 100, 0.5);
     border-bottom-style: dashed;
     border-radius: 40px;
     width: 40px;
@@ -87,6 +85,7 @@ button {
     margin: 10px;
     font-size: 20pt;
     text-align: center;
+    color: rgb(255,255,255);
 }
 #mainForm{
     font-size: 16pt;

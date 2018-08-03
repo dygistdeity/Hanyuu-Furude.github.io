@@ -2,12 +2,36 @@
 <html lang="en">
 
 <head>
-    <title>抽了个签</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>抽签小程序</title>
     <link rel="stylesheet" href="rand.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        var number = 0;
+        var no = new Array();
+        var name=new Array();
+        var size=0;
+        $(document).ready(function ()
+        {
+            $("#result").hide();
+            $.getJSON("data.json",function(data){
+                $.each(data.info,function(i,item){
+                    no[i]=item.No;
+                    name[i]=item.name;
+                    number++;
+                })
+            });
+            $("#button").click(function(){
+                alert();
+            });
+        });
 
-    <script>
+
+
+
+
+
+
         var max = 32;
         var list = new Array(max);
         list[0] = { idcard: "example01", name: "库代蓝" };
@@ -102,7 +126,7 @@
         <img id="pic" src="hanyuu.png">
         <div id="title">抽签小程序</div>
         <div id="info">
-            Powered by:Kuang.
+            Powered by:Hanyu.
             <br> &copy; Copyright
             <small>2018</small>
             <i>
@@ -122,7 +146,6 @@
     <main id="mainForm">
         <center>
             <div id="main_box">
-
                 抽取人数：
                 <input type="number" id="number" min="1" max="32" value="1"></input>
                 <button id="button" type="buttom" onclick="draw()">▷</button>
