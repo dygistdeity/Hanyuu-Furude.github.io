@@ -11,7 +11,7 @@
         var no = new Array();
         var name = new Array();
         var size = 0;
-        var state=0;
+        var state = 0;
         var handle;
         $(document).ready(function ()
         {
@@ -27,29 +27,31 @@
             });
             $("#button").click(function ()
             {
-            if(state==0){
-            size = $("#number").val();
-            // alert(Math.floor(Math.random()*10));
-            if (size < 1)
-            {
-                alert("抽" + size + "个人你认真的嘛(+_+)?");
-                $("#result").slideUp();
-                return;
-            }
-            else if (size > number)
-            {
-                alert("人数太多了喵(。・∀・)ノ");
-                $("#result").slideUp();
-                return;
-            }
-            document.getElementById("button").innerHTML = "◻";
-            state=1;
-               handle= self.setInterval(flash, 40);
+                if (state == 0)
+                {
+                    size = $("#number").val();
+                    // alert(Math.floor(Math.random()*10));
+                    if (size < 1)
+                    {
+                        alert("抽" + size + "个你认真的嘛（⊙ｏ⊙）");
+                        $("#result").slideUp();
+                        return;
+                    }
+                    else if (size > number)
+                    {
+                        alert("人数太多了喵(。・∀・)ノ");
+                        $("#result").slideUp();
+                        return;
+                    }
+                    document.getElementById("button").innerHTML = "◻";
+                    state = 1;
+                    handle = self.setInterval(flash, 40);
                 }
-                else{
+                else
+                {
                     handle = window.clearInterval(handle);
                     flash();
-                    state=0;
+                    state = 0;
                     document.getElementById("button").innerHTML = "▷";
                 }
             });
@@ -69,8 +71,9 @@
                         break;
                     }
             }
-            for (var i = 0; i < size; i++){
-                 result=result+no[choice[i]]+"  "+name[choice[i]]+"<br>";
+            for (var i = 0; i < size; i++)
+            {
+                result = result + no[choice[i]] + "  " + name[choice[i]] + "<br>";
             }
 
             document.getElementById("result").innerHTML = result;
