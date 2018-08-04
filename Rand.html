@@ -9,45 +9,72 @@
     <script type="text/javascript">
         var number = 0;
         var no = new Array();
-        var name=new Array();
-        var size=0;
+        var name = new Array();
+        var size = 0;
+        var state=0;
+        var handle;
         $(document).ready(function ()
         {
             $("#result").hide();
-            $.getJSON("data.json",function(data){
-                $.each(data.info,function(i,item){
-                    no[i]=item.No;
-                    name[i]=item.name;
+            $.getJSON("data.json", function (data)
+            {
+                $.each(data.info, function (i, item)
+                {
+                    no[i] = item.No;
+                    name[i] = item.name;
                     number++;
                 })
             });
-            $("#button").click(function(){
-                flash();
+            $("#button").click(function ()
+            {
+            if(state==0){
+            size = $("#number").val();
+            // alert(Math.floor(Math.random()*10));
+            if (size < 1)
+            {
+                alert("抽" + size + "个人你认真的嘛(+_+)?");
+                $("#result").slideUp();
+                return;
+            }
+            else if (size > number)
+            {
+                alert("人数太多了喵(。・∀・)ノ");
+                $("#result").slideUp();
+                return;
+            }
+            document.getElementById("button").innerHTML = "◻";
+            state=1;
+               handle= self.setInterval(flash, 40);
+                }
+                else{
+                    handle = window.clearInterval(handle);
+                    flash();
+                    state=0;
+                    document.getElementById("button").innerHTML = "▷";
+                }
             });
         });
-    function flash(){
+        function flash()
+        {
+            $("#result").slideDown();
+            var choice = new Array();
+            var result = "";
+            for (var i = 0; i < size; i++)
+            {
+                choice[i] = Math.floor(Math.random() * number);
+                for (var j = 0; j < i; j++)
+                    if (choice[i] == choice[j])
+                    {
+                        i--;
+                        break;
+                    }
+            }
+            for (var i = 0; i < size; i++){
+                 result=result+no[choice[i]]+"  "+name[choice[i]]+"<br>";
+            }
 
-                size=$("#number").val();
-                // alert(Math.floor(Math.random()*10));
-                if(size<1){
-                    alert("抽"+size+"个人你认真的嘛(+_+)?");
-                    $("#result").slideUp();
-                    return;
-                }
-                else if(size>number){
-                    alert("人数太多了喵(。・∀・)ノ");
-                    $("#result").slideUp();
-                    return;
-                }
-                $("#result").slideDown();
-                var choice=new Array(number);
-                for(var i=0;i<number;i++){
-                    choice[i]=i;
-                    console.log(choice[i]);
-                }
-                var result="sfdsdfs";
-                document.getElementById("result").innerHTML = result;
-    }
+            document.getElementById("result").innerHTML = result;
+        }
 
 
     </script>
