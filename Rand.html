@@ -65,7 +65,7 @@
         {
             $("#result").slideDown();
             var choice = new Array();
-            var result = "";
+            var result = "抽取人数/总人数:"+size+"/"+number+" 概率:"+(size/number)+"<br>";
             for (var i = 0; i < size; i++)
             {
                 choice[i] = Math.floor(Math.random() * number);
@@ -117,8 +117,8 @@
         <center>
             <div id="main_box">
                 抽取人数：
-                <input type="number" id="number" min="1" max="32" value="1"></input>
-                <button id="button" type="buttom" onclick="draw()">▷</button>
+                <input type="number" id="number"></input>
+                <button id="button" type="buttom">▷</button>
                 <br>
                 <div id="result"></div>
             </div>
