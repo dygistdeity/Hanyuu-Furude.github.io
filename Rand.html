@@ -22,16 +22,77 @@
                 })
             });
             $("#button").click(function(){
-                alert();
+                flash();
             });
         });
+    function flash(){
+
+                size=$("#number").val();
+                // alert(Math.floor(Math.random()*10));
+                if(size<1){
+                    alert("抽"+size+"个人你认真的嘛(+_+)?");
+                    $("#result").slideUp();
+                    return;
+                }
+                else if(size>number){
+                    alert("人数太多了喵(。・∀・)ノ");
+                    $("#result").slideUp();
+                    return;
+                }
+                $("#result").slideDown();
+                var choice=new Array(number);
+                for(var i=0;i<number;i++){
+                    choice[i]=i;
+                    console.log(choice[i]);
+                }
+                var result="sfdsdfs";
+                document.getElementById("result").innerHTML = result;
+    }
 
 
+    </script>
 
+</head>
 
+<body>
 
+    <div id="head">
+        <img id="pic" src="hanyuu.png">
+        <div id="title">抽签小程序</div>
+        <div id="info">
+            Powered by:Hanyu.
+            <br> &copy; Copyright
+            <small>2018</small>
+            <i>
+                <strong>
+                    <a href="index.html">SkylarkStudio</a>
+                </strong>
+                <br>
+            </i>All right saved.</small>
+            <br>
+            <strong>
+                <a href="mailto:Skylark_Studio@outlook.com">Contact me</a>
+            </strong>
+        </div>
+    </div>
 
+    </head>
+    <main id="mainForm">
+        <center>
+            <div id="main_box">
+                抽取人数：
+                <input type="number" id="number" min="1" max="32" value="1"></input>
+                <button id="button" type="buttom" onclick="draw()">▷</button>
+                <br>
+                <div id="result"></div>
+            </div>
+        </center>
+    </main>
 
+</html>
+
+<!-- 
+    
         var max = 32;
         var list = new Array(max);
         list[0] = { idcard: "example01", name: "库代蓝" };
@@ -112,47 +173,5 @@
                 result = result + list[num[i]].idcard + " " + list[num[i]].name + "<br/>";
             document.getElementById("result").innerHTML = result;
 
-        }
-
-        win
-
-    </script>
-
-</head>
-
-<body>
-
-    <div id="head">
-        <img id="pic" src="hanyuu.png">
-        <div id="title">抽签小程序</div>
-        <div id="info">
-            Powered by:Hanyu.
-            <br> &copy; Copyright
-            <small>2018</small>
-            <i>
-                <strong>
-                    <a href="index.html">SkylarkStudio</a>
-                </strong>
-                <br>
-            </i>All right saved.</small>
-            <br>
-            <strong>
-                <a href="mailto:Skylark_Studio@outlook.com">Contact me</a>
-            </strong>
-        </div>
-    </div>
-
-    </head>
-    <main id="mainForm">
-        <center>
-            <div id="main_box">
-                抽取人数：
-                <input type="number" id="number" min="1" max="32" value="1"></input>
-                <button id="button" type="buttom" onclick="draw()">▷</button>
-                <br>
-                <div id="result"></div>
-            </div>
-        </center>
-    </main>
-
-</html>
+        } 
+ -->
