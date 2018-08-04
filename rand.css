@@ -11,7 +11,22 @@ body {
     margin: 0;
     background-image: url(background.jpg);
 }
-
+#ltree{
+    z-index: -2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+}
+#rtree{
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 300px;
+    width: 300px;
+}
 #head {
     position: absolute;
     left: 20px;
