@@ -9,22 +9,14 @@
     <script type="text/javascript">
         var number = 0;
         var no = new Array();
-        var name = new Array();
+        var userName = new Array();
         var size = 0;
         var state = 0;
         var handle;
         $(document).ready(function ()
         {
             $("#result").hide();
-            $.getJSON("data.json", function (data)
-            {
-                $.each(data.info, function (i, item)
-                {
-                    no[i] = item.No;
-                    name[i] = item.name;
-                    number++;
-                })
-            });
+            initialize();
             $("#button").click(function ()
             {
                 if (state == 0)
@@ -56,6 +48,19 @@
                 }
             });
         });
+        function initialize()
+        {
+            $.getJSON("data.json", function (data)
+            {
+                $.each(data.info, function (i, item)
+                {
+                    no[i] = item.No;
+                    userName[i] = item.name;
+                    number++;
+                })
+            });
+
+        }
         function flash()
         {
             $("#result").slideDown();
@@ -73,7 +78,7 @@
             }
             for (var i = 0; i < size; i++)
             {
-                result = result + no[choice[i]] + "  " + name[choice[i]] + "<br>";
+                result = result + no[choice[i]] + "  " + userName[choice[i]] + "<br>";
             }
 
             document.getElementById("result").innerHTML = result;
@@ -120,88 +125,3 @@
     </main>
 
 </html>
-
-<!-- 
-    
-        var max = 32;
-        var list = new Array(max);
-        list[0] = { idcard: "example01", name: "库代蓝" };
-        list[1] = { idcard: "example02", name: "常俊达" };
-        list[2] = { idcard: "example03", name: "兴南霜" };
-        list[3] = { idcard: "example04", name: "盈沛白" };
-        list[4] = { idcard: "example05", name: "闽和歌" };
-        list[5] = { idcard: "example06", name: "召紫萱" };
-        list[6] = { idcard: "example07", name: "虞琳芳" };
-        list[7] = { idcard: "example08", name: "厍天心" };
-        list[8] = { idcard: "example09", name: "飞君丽" };
-        list[9] = { idcard: "example10", name: "尉迟英杰" };
-        list[10] = { idcard: "example11", name: "独敏博" };
-        list[11] = { idcard: "example12", name: "仵玉珂" };
-        list[12] = { idcard: "example13", name: "栗丹亦" };
-        list[13] = { idcard: "example14", name: "濮天蓉" };
-        list[14] = { idcard: "example15", name: "虢痴柏" };
-        list[15] = { idcard: "example16", name: "井英睿" };
-        list[16] = { idcard: "example17", name: "溥浩宕" };
-        list[17] = { idcard: "example18", name: "亓妍芳" };
-        list[18] = { idcard: "example19", name: "辟清怡" };
-        list[19] = { idcard: "example20", name: "糜妙晴" };
-        list[20] = { idcard: "example21", name: "成修贤" };
-        list[21] = { idcard: "example22", name: "势烨霖" };
-        list[22] = { idcard: "example23", name: "仍香彤" };
-        list[23] = { idcard: "example24", name: "何格菲" };
-        list[24] = { idcard: "example25", name: "本寄蕾" };
-        list[25] = { idcard: "example26", name: "怀凝珍" };
-        list[26] = { idcard: "example27", name: "出家美" };
-        list[27] = { idcard: "example28", name: "帖娜娜" };
-        list[28] = { idcard: "example29", name: "莱初彤" };
-        list[29] = { idcard: "example30", name: "旷雅蕊" };
-        list[30] = { idcard: "example31", name: "郭寒香" };
-        list[31] = { idcard: "example32", name: "单易巧" };
-
-        var state = 0;
-        var dr;
-
-        function draw()
-        {
-            if (state == 0)
-            {
-                document.getElementById("button").innerHTML = "◻";
-                state = 1;
-                dr = self.setInterval(change, 10);
-            }
-            else
-            {
-                document.getElementById("button").innerHTML = "▷";
-                state = 0;
-                dr = window.clearInterval(dr);
-            }
-        }
-
-        function change()
-        {
-            var number = document.getElementById("number").value;
-
-            if (number < 1 || number > max)
-            {
-                return;
-            }
-
-            var num = new Array();
-            for (var i = 0; i < number; i++)
-            {
-                num[i] = Math.floor(Math.random() * max);
-                for (var j = 0; j < i; j++)
-                    if (num[i] == num[j])
-                    {
-                        i--;
-                        break;
-                    }
-            }
-
-            var result = "";
-            for (var i = 0; i < number; i++)
-                result = result + list[num[i]].idcard + " " + list[num[i]].name + "<br/>";
-            document.getElementById("result").innerHTML = result;
-
-        } 
- -->
