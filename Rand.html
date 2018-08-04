@@ -35,7 +35,7 @@
                         $("#result").slideUp();
                         return;
                     }
-                    document.getElementById("button").innerHTML = "◻";
+                    $("#button").text("⚐");
                     state = 1;
                     handle = self.setInterval(flash, 40);
                 }
@@ -44,7 +44,7 @@
                     handle = window.clearInterval(handle);
                     flash();
                     state = 0;
-                    document.getElementById("button").innerHTML = "▷";
+                    $("#button").text("▷");
                 }
             });
         });
