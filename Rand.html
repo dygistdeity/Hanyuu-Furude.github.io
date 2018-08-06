@@ -65,7 +65,7 @@
         {
             $("#result").slideDown();
             var choice = new Array();
-            var result = "抽取/总数:"+size+"/"+number+" 概率:"+(size/number)+"<br>";
+            var result = "抽取/总数:"+size+"/"+number+" 概率:"+(size/number).toFixed(4)+"<br>";
             for (var i = 0; i < size; i++)
             {
                 choice[i] = Math.floor(Math.random() * number);
