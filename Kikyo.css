@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family:"courier","微软雅黑","Microsoft YaHei","Times New Roman",Georgia,Serif;
+    font-family: "courier", "微软雅黑", "Microsoft YaHei", "Times New Roman", Georgia, Serif;
     background-color: #f6efe4;
     min-width: 220px;
     min-height: 600px;
@@ -74,7 +74,7 @@ nav {
     /* display: inline-block; */
     margin: 5px;
     padding: 10px;
-    border-radius: 0px ;
+    border-radius: 0px;
     box-shadow: 5px 5px 15px;
     border-style: hidden;
     color: #6a8372;
@@ -98,16 +98,27 @@ a {
     background-color: rgba(255, 255, 255, 0.3);
     text-align: center;
 }
-.spca{
+
+.spca {
     border: none;
     box-shadow: 0 0 0;
     margin: 0;
     padding: 0;
     color: rgba(255, 255, 255, 0);
-    background-color:rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
 }
+
 #music {
     position: absolute;
     left: 20px;
     top: 150px;
+}
+
+#bottomImage {
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
