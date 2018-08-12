@@ -67,6 +67,11 @@ body {
     /* background-color: rgba(255, 255, 255, 0.3); */
 }
 
+div{
+    color: #6a4c9c;
+    text-shadow: 3px 3px 6px #8F77B5;
+}
+
 nav {
     font-weight: bold;
     clear: both;
