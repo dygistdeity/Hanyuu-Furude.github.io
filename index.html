@@ -12,40 +12,27 @@
     <script type="text/javascript">
         $(document).ready(function ()
         {
-            $("nav").hide();
-            $("nav").slideDown(2000);
+            $("#mainDiv>nav").hide();
+            $("#mainDiv>nav").slideDown(2000);
         })
     </script>
 </head>
 
 <body id="index">
     <header>
-        <img id="logo" src="logo.png">
+        <!-- <img id="logo" src="logo.png"> -->
         <div id="head">
-            <span id="title">云雀工坊</span>
-            <br>
-            <span id="sub_title">Skylark Studio</span>
-            <div id="info">
-                &copy; Copyright
-                <small>2018</small>
-                <i>
-                    <strong>
-                        <a class="spca" style="color: #4c8dae" href="https://github.com/Hanyuu-Furude">Skylark Studio</a>
-                    </strong>
-                </i>.
-                <br> All right saved.</small>
-                <br>
-                <strong>
-                    <a class="spca" style="color: #4c8dae;" href="mailto:Skylark_Studio@outlook.com">Contact me</a>
-                </strong>
-            </div>
-        </div>
-        <div id="music">
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=1&id=73093&auto=0&height=32"></iframe>
+            <div id="title">云雀工坊</div>
+            <nav id="headNav">
+                <a href="#FastNav" class="headNavLink">Fast Nav</a>
+                <a href="#DeepLearning" class="headNavLink">Deep Learning</a>
+                <a href="#BookRes"class="headNavLink">Book resources</a>
+                <a href="#ACGNNav"class="headNavLink">ACGN Nav</a>
+            </nav>
         </div>
     </header>
     <div id="mainDiv">
-        <nav>
+        <nav id="FastNav">
             <div class="Kikyo">【Fast Nav】</div>
 
             <a href="https://github.com/Hanyuu-Furude">Github</a>
@@ -56,8 +43,7 @@
                 <small>(自我嫌弃中……)</small>
             </a>
         </nav>
-        <br>
-        <nav>
+        <nav id="DeepLearning">
             <div>【Deep Learning】</div>
             <a href="http://www.deeplearningbook.org/">Deep Learning Book[En]</a>
             <a href="https://github.com/exacity/deeplearningbook-chinese">Deep Learning Book[Cn]（github)</a>
@@ -78,8 +64,7 @@
             <a href="https://developer.nvidia.com/cuda-toolkit">CUDnn cuda-toolkit</a>
             <a href="http://yann.lecun.com/exdb/mnist/" ?>THE MNIST DATABASE of handwritten digits</a>
         </nav>
-        <br>
-        <nav>
+        <nav id="BookRes">
             <div>【Book resources】</div>
             [Deep learning]
             <br>
@@ -94,12 +79,11 @@
             <br>
             <small>
                 图书资源会不定期更新哒，我尽量保证在开源许可范围内提供图书资源，如果您觉得侵犯了您的权益，请及时联系我做妥善处理。
-                <br>
-                如果您有优秀图书资源愿意共享，欢迎联系我帮助上架，让更多的人看到您的分享。谢谢。
+                <br> 如果您有优秀图书资源愿意共享，欢迎联系我帮助上架，让更多的人看到您的分享。谢谢。
             </small>
 
         </nav>
-        <nav>
+        <nav id="ACGNNav">
             <div>【ACGN Nav】</div>
             <a href="http://www.oyashirosama.com">oyashirosama</a>
             <a href="http://www.jigokushoujo.com/">jigokushoujo</a>
@@ -109,6 +93,18 @@
     <br>
     </div>
 
+    <div id="info">
+        &copy; Copyright
+        <small>2018</small>
+        <i>
+            <strong>
+                <a class="spca" style="color: #A5DEE4;" href="https://github.com/Hanyuu-Furude">Skylark Studio</a>
+            </strong>
+        </i> All right saved.</small>
+        <strong>
+            <a class="spca" style="color:#A5DEE4;" href="mailto:Skylark_Studio@outlook.com">[ Contact me ]</a>
+        </strong>
+    </div>
 </body>
 
 </html>
